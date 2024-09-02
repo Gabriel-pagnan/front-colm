@@ -1,5 +1,5 @@
-export const URL_DEPARTMENT = 'http://localhost:5000/departments';
-export const URL_DEPARTMENT_ID = 'http://localhost:5000/departments/1';
-export const URL_USER = 'http://localhost:5000/users/1';
+export const URL_DEPARTMENT = process.env.REACT_APP_API_URL + '/departments';
+export const URL_DEPARTMENT_ID = process.env.REACT_APP_API_URL + '/departments/1';
+export const URL_USER = process.env.REACT_APP_API_URL + '/users/1';
 
-export const URL_AUTH = 'http://localhost:5000/auth';
+export const URL_AUTH = process.env.REACT_APP_API_URL + '/auth';

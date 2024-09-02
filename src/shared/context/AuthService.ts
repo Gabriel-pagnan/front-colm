@@ -3,8 +3,9 @@ import axios from "axios";
 interface IAuth {
   accessToken: string;
 }
+
 const Api = axios.create({
-  baseURL: 'http://localhost:5000',
+  baseURL: process.env.REACT_APP_API_URL,
 });
 
 export let AccessToken = '';

@@ -171,5 +171,3 @@ export const User = () => {
         </DrawerBar>
     )
 }
-
-document.title = 'Usuário';

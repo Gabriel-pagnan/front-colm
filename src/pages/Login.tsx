@@ -96,5 +96,3 @@ export default function Login({ children }: ILoginProps) {
         </Box>
     )
 }
-
-document.title = 'Login'

@@ -175,5 +175,3 @@ export const Departments = () => {
         </DrawerBar>
     );
 }
-
-document.title = 'Setores';

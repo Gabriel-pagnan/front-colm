@@ -176,5 +176,3 @@ export const Questionary = () => {
         </DrawerBar>
     )
 }
-
-document.title = 'Questionário';

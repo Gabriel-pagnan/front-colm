@@ -87,5 +87,3 @@ export default function Register() {
         </Box>
     )
 }
-
-document.title = 'Cadastrar';

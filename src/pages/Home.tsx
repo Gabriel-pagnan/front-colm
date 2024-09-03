@@ -36,5 +36,3 @@ export const Home = () => {
         </DrawerBar>
     )
 }
-
-document.title = 'Dashboard';

@@ -18,14 +18,14 @@ export const Home = () => {
     return (
         <DrawerBar title={`Olá, ${user}`}>
             <Grid m={3} container spacing={3}>
-                <Grid item xs={3} sx={{minHeight: '150px'}}>
+                <Grid item xs={8} md={4} lg={4} sx={{minHeight: '150px'}}>
                     <Card 
                         to={PathEnum.QUESTIONARY}
                         title='Responder questionário'
                         icon={<AutoStoriesIcon fontSize='large' sx={{color: Colors.blue600}}/>}
                     />
                 </Grid>
-                <Grid item xs={3} sx={{minHeight: '150px'}}>
+                <Grid item xs={8} md={4} lg={3} sx={{minHeight: '150px'}}>
                     <Card 
                         to={PathEnum.RESULT}
                         title='Visualizar Historíco'

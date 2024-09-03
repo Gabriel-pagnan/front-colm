@@ -99,7 +99,7 @@ export const User = () => {
                                 onChange={handleChange}
                             />
                         </Grid>
-                        <Grid item xs={8}>
+                        <Grid item xs={12} md={4} lg={8}>
                             <Select
                                 options={PermissionMock}
                                 label='Permissão'
@@ -107,14 +107,14 @@ export const User = () => {
                                 onChange={handleChangeSelect}
                                 autoWidth={false} multiple={false} native={false} />
                         </Grid>
-                        <Grid item xs={4}>
+                        <Grid item xs={12} md={4} lg={4}>
                             <Button sx={{ width: '100%', p: 2 }} variant="contained" onClick={showTargetPassword}>
                                 Trocar senha
                             </Button>
                         </Grid>
                         {targetPassword && (
                             <>
-                                <Grid item xs={8}>
+                                <Grid item xs={12} md={4} lg={8}>
                                     <TextField
                                         variant='filled'
                                         fullWidth
@@ -139,7 +139,7 @@ export const User = () => {
                                         }}
                                     />
                                 </Grid>
-                                <Grid item xs={5}>
+                                <Grid item xs={12} md={5} lg={5}>
                                     <Button
                                         variant="contained"
                                         onClick={handleRandomPassword}

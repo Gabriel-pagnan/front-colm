@@ -94,7 +94,7 @@ export default function Result() {
 
                         <Grid item xs={9} textAlign={'center'}>
                             <Button>
-                                <a target='_blank' href="https://wa.me//5516 99109-8911?text=Quero%20falar%20com%20um%20especialista" rel="noreferrer">Falar com um especialista</a>
+                                <a target='_blank' href="https://wa.me//5516991098911?text=Quero%20falar%20com%20um%20especialista" rel="noreferrer">Falar com um especialista</a>
                             </Button>
                         </Grid>
                     </Grid>

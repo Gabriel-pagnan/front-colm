@@ -15,6 +15,7 @@ import { ListItemLink } from './components/ListItem';
 import { Colors } from '../../themes/Colors';
 import { useNavigate } from 'react-router-dom';
 import { useAuthContext } from '../../context/AuthContext';
+import { Logo } from '../Logo';
 
 const drawerWidth = 250;
 
@@ -43,7 +44,7 @@ const closedMixin = (theme: Theme): CSSObject => ({
 
 const DrawerHeader = styled('div')(({ theme }) => ({
     display: 'flex',
-    alignItems: 'center',
+    alignItems: 'flex-start',
     justifyContent: 'flex-end',
     backgroundColor: Colors.blue300,
     padding: theme.spacing(0, 1),
@@ -145,9 +146,7 @@ export const DrawerBar: React.FC<ISideBarProps> = ({ stepperList, children, titl
             </AppBar>
             <Drawer variant="permanent" open={open} sx={{ background: Colors.blue300, }}>
                 <DrawerHeader sx={{ pt: 2, gap: 3 }}>
-                    <Typography fontSize={25} color={Colors.white}>
-                        COLMEIA 360
-                    </Typography>
+                    <Logo />
                     <IconButton onClick={handleDrawerClose}>
                         {theme.direction === 'rtl' 
                             ? <ChevronRightIcon sx={{color: Colors.white}}/> 
@@ -182,6 +181,9 @@ export const DrawerBar: React.FC<ISideBarProps> = ({ stepperList, children, titl
                         m: 2,
                         borderRadius: 10,
                         boxShadow: 'none',
+                        position: 'absolute',
+                        bottom: 0,
+                        minWidth: '88%'
                     }}>
                     Sair
                 </Button>

@@ -1,7 +1,5 @@
 import React from 'react';
 import { Button } from '@mui/material';
-import { styleBtnPrimary } from '../../themes/styleButton';
-
 interface IPaginationBtn {
     title?: string,
     variant: "contained" | "text" | "outlined",

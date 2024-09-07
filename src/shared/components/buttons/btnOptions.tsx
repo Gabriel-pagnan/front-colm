@@ -17,7 +17,7 @@ export default function Options({ option, label, color, onSelect, isSelected }: 
             onClick={() => onSelect(option)}
             sx={{
                 ...styleBtnOptions,
-                background: isSelected ? color : '#c2c2c2',
+                background: isSelected ? color : '#F3F4F6',
             }}>
             <Typography
                 sx={{

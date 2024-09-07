@@ -33,7 +33,7 @@ export const Questionary = () => {
     const [selectedOption, setSelectedOption] = useState<string | null>(null);
     const [questions, setQuestions] = useState<QuestionType[]>([]);
     const [currentIndex, setCurrentIndex] = useState<number>(0);
-    const [department, setDepartment] = useState<DepartmentType>({
+    const [_, setDepartment] = useState<DepartmentType>({
         id: 0,
         name: '',
         description: '',
@@ -96,8 +96,6 @@ export const Questionary = () => {
         }
     };
 
-    console.log(department);
-
     return (
         <DrawerBar
             title='Questionário do setor'
@@ -130,7 +128,7 @@ export const Questionary = () => {
                         <InfoIcon fontSize='large' sx={{ color: Colors.grayPrimary }} />
                     </Tooltip>
                     <Typography width='80%' fontSize={18} color={Colors.grayPrimary}>
-                        Resposta: {question?.response || ''}
+                        Pergunta: {question?.response || ''}
                     </Typography>
                 </Box>
 
@@ -150,14 +148,23 @@ export const Questionary = () => {
 
                 {/* btn */}
                 <Box mt={3} display={'flex'} alignItems={'center'} justifyContent={'space-between'}>
-                    {currentIndex > 0 && (
-                        <ButtonPagination
-                            event={handleBack}
-                            startIcon={<WestRounded />}
-                            label='Voltar'
-                            variant='outlined'
-                        />
-                    )}
+                    {currentIndex > 0 ? (
+                            <ButtonPagination
+                                event={handleBack}
+                                startIcon={<WestRounded />}
+                                label='Voltar'
+                                variant='outlined'
+                            />
+                        ) :
+                        (
+                            <ButtonPagination
+                                event={() => navigate('/home')}
+                                startIcon={<WestRounded />}
+                                label='Voltar'
+                                variant='outlined'
+                            />
+                        )
+                    }
 
                     <ButtonPagination
                         event={handleNext}
